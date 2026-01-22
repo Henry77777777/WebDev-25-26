@@ -17,7 +17,7 @@ function slope(){
     let y2 = parseFloat(document.getElementById("x2").value);
     let op = document.getElementById("output2");
     let s = (x1 + x2) / (y1 - y2)
-    op.innerHTML = "Your slope is is " + s;
+    op.innerHTML = "Your slope is " + s;
 }
 
 // Challenge 6:  Create the function for the BMI program.  Refer to the resource link in the HTML for assistance.
