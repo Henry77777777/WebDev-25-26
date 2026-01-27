@@ -7,7 +7,7 @@ function average(){
     let a = (g1 + g2 + g3) / 3
     op.innerHTML = "Your average is " + a;
 }
- 
+
 
 // Challenge 4:  Create the function for the Slope program.  Refer to the resource link in the HTML for assistance.
 function slope(){
@@ -16,7 +16,7 @@ function slope(){
     let y1 = parseFloat(document.getElementById("x1").value);
     let y2 = parseFloat(document.getElementById("x2").value);
     let op = document.getElementById("output2");
-    let s = (x1 + x2) / (y1 - y2)
+    let s = (y2-y1) / (x2-x1)
     op.innerHTML = "Your slope is " + s;
 }
 
@@ -25,6 +25,6 @@ function BMI(){
     let height = parseFloat(document.getElementById("height").value);
     let weight = parseFloat(document.getElementById("weight").value);
     let op = document.getElementById("output3");
-    let BMI = (weight * 703) / (height)**2
+    let BMI =  ( (weight  ) / (height**2) ) * 703 
     op.innerHTML = "Your body mass index is " + BMI;
 }
