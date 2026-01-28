@@ -20,11 +20,11 @@ function dist(){
 function compound(){
     let p = parseFloat(document.getElementById("amount").value);
     let r = parseFloat(document.getElementById("rate").value);
-    let n = parseFloat(document.getElementById("n").value);
+    let n = parseFloat(document.getElementById("amount2").value);
     let t = parseFloat(document.getElementById("time").value);
-    let op = document.getElementById("output2");
-    let c = p(1+r/n)**(n*t)
-    op.innerHTML = "Your compound interest is " + c;
+    let output = document.getElementById("output");
+    let c = p*(1+r/n)**(n*t)
+    output.innerHTML = "Your compound interest is " + c;
 }
 
 
