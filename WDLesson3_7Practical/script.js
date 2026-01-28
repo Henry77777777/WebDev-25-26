@@ -3,12 +3,28 @@
       2) Perform the necessary calculations
       3) Display the results in the appropriate element
 */
-
+function dist(){
+    let y1 = parseFloat(document.getElementById("y1").value);
+    let y2 = parseFloat(document.getElementById("y2").value);
+    let x1 = parseFloat(document.getElementById("x1").value);
+    let x2 = parseFloat(document.getElementById("x2").value);
+    let op = document.getElementById("output");
+    let d = Math.sqrt( Math.pow(x2-x1, 2) + Math.pow( y2 - y1, 2))
+    op.innerHTML = "Your distance between points $({x1}, {y1})  and $({x2}, {y2}) " + d;
+}
 /* Challenge 4: Create a function to serve as the event handler for the compound interest UI. Guidelines,
       1) Create variables and retrieve the information from the text inputs you created in Challenge 1.
       2) Perform the necessary calculations
       3) Display the results in the appropriate element
 */
-
+function compound(){
+    let p = parseFloat(document.getElementById("amount").value);
+    let r = parseFloat(document.getElementById("rate").value);
+    let n = parseFloat(document.getElementById("n").value);
+    let t = parseFloat(document.getElementById("time").value);
+    let op = document.getElementById("output2");
+    let c = p(1+r/n)**(n*t)
+    op.innerHTML = "Your compound interest is " + c;
+}
 
 
