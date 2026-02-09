@@ -11,17 +11,17 @@ function name(){
 
 }
 */
+
 function Area(){
   let height = parseFloat(document.getElementById("height").value)
-  let width = parseFloat(document.getElementById("height").value)
+  let width = parseFloat(document.getElementById("width").value)
   let output = document.getElementById("output")
   let a = (width * height)
   output.innerHTML = `your area is ${a}`
   if (width <= 0 || height <= 0 ){
   message = "Inappropriate measurement"
-  output.innerHTML = `Your inputs are ${message}`
-}
-
+  output = message
+  }
 }  
 /* Challenge 2:  Create the function for Challenge 1 scenario */
 
