@@ -13,14 +13,14 @@ function name(){
 */
 
 function Area(){
-  let height = parseFloat(document.getElementById("height").value)
-  let width = parseFloat(document.getElementById("width").value)
-  let output = document.getElementById("output")
-  let a = (width * height)
-  output.innerHTML = `your area is ${a}`
+  let height = parseFloat(document.getElementById("height").value);
+  let width = parseFloat(document.getElementById("width").value);
+  let output = document.getElementById("output");
+  let a = (width * height);
+  output.innerHTML = `your area is ${a}`;
   if (width <= 0 || height <= 0 ){
-  message = "Inappropriate measurement"
-  output = message
+  message = "Inappropriate measurement";
+  output = message;
   }
 }  
 /* Challenge 2:  Create the function for Challenge 1 scenario */
@@ -30,34 +30,31 @@ function Area(){
 1) Review the HTML for the UI.  Remember dropdown boxes are just input.
 2) You will need to write HTML as part of the output.  
    For example, output.innerHTML = `<input src="pic.png">` would place the image in the <div>*/
-function Pet(){
-  let animal = document.getElementById("animal").value
-  let emotion = document.getElementById("emotion").value
-  output = document.getElementById("output")
-  if (animal == Bear  && emotion == Funny ){
-    message = <input src = "funnyBear.jpg"></input>
-    output = `${message}`
+function pet(){
+  let a = document.getElementById("animal").value;
+  let e = document.getElementById("emotion").value;
+  let output = document.getElementById("output");
+  output.innerHTML = "";
+  let filename = "";
+  if (a == "Bear"  && emotion == "Funny" ){
+    filename = "funnyBear.jpg";
   }
-  if (animal == Bear  && emotion == Sad ){
-    message = <input src = "sadBear.jpg"></input>
-    output = `${message}`
+  if (a == "Bear"  && emotion == "Sad" ){
+    filename = "sadBear.jpg";
   }
-  if (animal == Dog && emotion == Funny ){
-    message = <input src = "funnyDog.jpg"></input>
-    output = `${message}`
+  if (a == "Dog" && e == "Sad"){
+    filename = "funnyDog.jpg";
   }
-  if (animal == Dog  && emotion == Sad ){
-    message = <input src = "sadDog.jpg"></input>
-    output = `${message}`
+  if (a == "Dog"  && e == "Sad" ){
+    filename = "sadDog.jpg";
   }
-  if (animal == Cat  && emotion == Funny ){
-    message = <input src = "funnyCat.jpg"></input>
-    output = `${message}`
+  if (a == "Cat"  && e == "Funny" ){
+    filename = "funnyCat.jpg";
   }
-  if (animal == Cat  && emotion == Sad ){
-    message = <input src = "sadCat.jpg"></input>
-    output = `${message}`
+  if (a == "Cat"  && e == "Sad" ){
+    filename = "sadCat.jpg";
+  output.innerHTML = `<img src = "${filename}">`;
   }
-
+  
 
 }
