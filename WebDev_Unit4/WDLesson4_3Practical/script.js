@@ -10,19 +10,24 @@ function BMI(){
        let  formula = (weight / Math.pow(height, 2)) * 703;
        output.innerHTML = "";
        let filename = "";
+       let status = "";
        if(formula < 18.5){
-       filename = "underweight.png"
+       filename = "underweight.png";
+       status = "under weight"
        }
        else if(formula > 18.5 && formula < 24.9){
-       filename = "healthyweight.png"
+       filename = "healthyweight.png;"
+       status = "healthy weight"
        }
        else if(formula > 25 && formula < 299){
-       filename = "overweight.png"
+       filename = "overweight.png";
+       status = "over weight"
        }
        else{
-       filename = "obeseweight.png"
+       filename = "obeseweight.png";
+       status = "obese weight"
        }
-       output.innerHTML = `<img src = "${filename}">`;
+       output.innerHTML = `<img src = "${filename}"><br>You are ${status}`;
  
 }
 
