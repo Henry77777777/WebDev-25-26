@@ -19,7 +19,7 @@ function calculating(){
     let rate = parseFloat(document.getElementById("R").value);
     let n = parseFloat(document.getElementById("N").value);
     let time = parseFloat(document.getElementById("T").value);
-    let build = "";
+    let build = `<h2>Yearly Balances</h2>`;
     for(let t = 0; t <= time; t += 1 ){
         let A = principle*(1 + rate/n) ** (n*t);
        build += `Year ${t}: $ ${A.toFixed(2)} <br>`; 
