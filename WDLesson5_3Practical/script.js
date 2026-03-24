@@ -11,8 +11,22 @@
 */
 
 function balance(){
-
-
+        let output = document.getElementById("output");
+        let p = parseInt(document.getElementById("p").value);
+        let r = parseInt(document.getElementById("r").value);
+        let years = parseInt(document.getElementById("t").value);
+        let build = "";
+        build+= `<table>
+                        <tr>    <th>Years</th>  <th>Balance</th>        </tr>`;
+        for(let t = 0; t <= years; t++ ){
+                let A = p * Math.pow(1 + (r/100), t)
+                        build += `      <tr>
+                                                <td>${t}</td>
+                                                <td>$${A.toFixed(2)}</td>
+                                        </tr>`;
+        } 
+        build += "</table>";
+        output.innerHTML = build;
 }
 
 /* Challenge Bonus: Allow the user to enter n.  This will require you to modify,
