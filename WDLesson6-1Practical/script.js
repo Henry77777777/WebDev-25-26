@@ -1,0 +1,63 @@
+/*
+Challenge 1: Add the appropriate images to each array below from the list of images provided.
+ "beeftips.jpg", "brisket.jpg", "ribeye.jpg", "steak.jpg", "clams.jpg", "crabs.jpg", "lobster.png", "scallops.jpg", "shrimp.jpg","tuna.jpg", "flan.jpg", "passionberry.jpeg", "oreocup.jpg"
+*/ 
+
+//Challenge 2: Add appropriate prices for each food in their corresponding array. (Any reasonable price works) 
+//Challenge 3: Add appropriate titles for each food in their corresponding array. Use the image names as a hint for the food title.
+
+let meat_images = ["beeftips.jpg", "brisket.jpg", "ribeye.jpg", "steak.jpg"];
+let meat_prices = [8.99, 9.99, 10.99, 11.99];
+let meat_titles = ["Beef tips", "Brisket", "Ribeye", "Steak"];
+ 
+let seafood_images = ["clams.jpg", "crabs.jpg", "lobster.png", "scallops.jpg", "shrimp.jpg","tuna.jpg"];
+let seafood_prices = [12.99, 13.99, 14.99, 15.99, 16.99, 17.99];
+let seafood_titles = ["Clams", "Crabs", "Lobster", "Scallops", "Shrimps", "Tuna"];
+
+let dessert_images = ["flan.jpg", "passionberry.jpeg", "oreocup.jpg"];
+let dessert_prices = [18.99, 19.99, 20.99];
+let dessert_titles = ["Flans", "Passionberry", "OreoCup"];
+
+function init(){
+  //Each food has its own output container
+  let m = document.getElementById("meats");
+  let s = document.getElementById("seafoods");
+  let d = document.getElementById("desserts");
+  let build = ``;
+
+  /* Notes for Challenges 4 through 6 below:
+      1) Each challenge requires its own for loop to build the output.
+      2) You can reuse the build variable as long as you set it back to `` before each loop.
+      3) Create a basic card with a title, image and price.
+  */
+
+  //Challenge 4:  Build cards for the meats. Place the build in the meat container. 
+  for(i = 0; i < meat_titles.length; i++){
+    build  += `<div class = "card">
+                    <h1>${meat_titles[i]}</h1>
+                    <img class = "food" src="images/${meat_images[i]}">
+                    <p>${meat_prices[i]}</p>
+                </div>`;
+  }
+  m.innerHTML = build;
+  //Challenge 5:  Build cards for the seafoods. Place the build in the seafood container.
+  build = "";
+  for(i = 0; i < seafood_titles.length; i++){
+    build  += `<div class = "card">
+                    <h1>${seafood_titles[i]}</h1>
+                    <img class = "food" src="images/${seafood_images[i]}">
+                    <p>${seafood_prices[i]}</p>
+                </div>`;
+  }
+  s.innerHTML = build;
+  build = ``;
+  //Challenge 6:  Build cards for the desserts. Place the build in the dessert container.
+  for(i = 0; i < dessert_titles.length; i++){
+    build  += `<div class = "card">
+                    <h1>${dessert_titles[i]}</h1>
+                    <img class = "food" src="images/${dessert_images[i]}">
+                    <p>${dessert_prices[i]}</p>
+                </div>`;
+  }
+  d.innerHTML = build;
+}
