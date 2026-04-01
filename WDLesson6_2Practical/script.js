@@ -27,14 +27,13 @@ function artist(){
   build += `<div>
                 <h2>${artist.name}</h2>
                 <p>${artist.album}</p>
+                <a href = "${artist.url}"target = blank>
                 <img src = "${artist.image}">
-                <br>
-                <a href = "${artist.url}"target = blank>kendrick lamar</a>
-             </div>`
+                </a>
+                </div>`
   //Challenge 3: Build a card for the information in the JSON. Make the image a hyperlink to the url provided.
   output.innerHTML = build;
 }
-
 
 
 
