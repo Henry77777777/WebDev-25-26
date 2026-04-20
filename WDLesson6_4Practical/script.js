@@ -24,7 +24,7 @@ async function init(){
                 <img src = "${crim.image}">
                 <h4>${crim.sex}</h4>
                 <h5>${crim.details}</h5>
-                <a href = "https://mozilla.github.io/pdf.js/web/viewer.html?file=${crim.pdf}" target = "_blank">View Poster</a>
+                <a href = "https://mozilla.github.io/pdf.js/web/viewer.html?file=${crim.pdf}" target = "_blank">view poster</a>
               </div>`;
   }
   
